@@ -28,4 +28,4 @@ int main() {
     std::cout << "Equivalente en metros: " << metros << std::endl;
 
     return 0;
-}
+} // CONVERTIR YARDAS A CENTIMETROS
