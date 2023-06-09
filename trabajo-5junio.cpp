@@ -43,11 +43,21 @@ int main() {
         cin >> bebida;
     }
 
-    // Calcular y mostrar el total a pagar
+    // Calcular el total a pagar
     double total = precio * cantidad;
+
+    // Aplicar descuentos si corresponde
+    if (ubicacion[0] == 'p') {
+        if (cantidad >= 8) {
+            total -= total * 0.15; // Descuento del 15% en Platea para compras de al menos 8 entradas
+        }
+        if (total > 600) {
+            total -= total * 0.2; // Descuento del 20% en Preferencial si la suma supera los 600
+        }
+    }
+
+    // Mostrar el total a pagar
     cout << "Total a pagar: " << total << endl;
 
     return 0;
 }
-// MODIFIQUE EL EJERCICIO PARA EL CASO QUE SI LA SUMA DE LAS ENTRADAS "PREFERENCIAL" SUPERA LOS 600 SE LES DARA UN DESCUENTO DEL 20% EN LA SIGUIENTE FUNCION
-// Y SI LA COMPRA UNA CANTIDAD MINIMA DE 8 ENTRADAS EN "PLATEA" SE DARA UN DESCUENTO DE 15%
