@@ -1,31 +1,18 @@
 #include <iostream>
 
 int main() {
-    double pies;
-    double yardas, pulgadas, centimetros, metros;
+    double yardas;
+    double centimetros;
 
-    // Lectura de la medida en pies
-    std::cout << "Ingrese la medida en pies: ";
-    std::cin >> pies;
-
-    // Conversión a yardas
-    yardas = pies / 3;
-
-    // Conversión a pulgadas
-    pulgadas = pies * 12;
+    // Lectura de la medida en yardas
+    std::cout << "Ingrese la medida en yardas: ";
+    std::cin >> yardas;
 
     // Conversión a centímetros
-    centimetros = pulgadas * 2.54;
+    centimetros = yardas * 91.44;
 
-    // Conversión a metros
-    metros = centimetros / 100;
-
-    // Imprimir los resultados
-    std::cout << "Equivalente en yardas: " << yardas << std::endl;
-    std::cout << "Equivalente en pies: " << pies << std::endl;
-    std::cout << "Equivalente en pulgadas: " << pulgadas << std::endl;
+    // Imprimir el resultado
     std::cout << "Equivalente en centímetros: " << centimetros << std::endl;
-    std::cout << "Equivalente en metros: " << metros << std::endl;
 
     return 0;
-} // CONVERTIR YARDAS A CENTIMETROS
+}
